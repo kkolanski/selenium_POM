@@ -17,4 +17,5 @@ class RegistrationTest(BaseTest):
         self.create_account_page.enter_first_name(self.data.FIRST_NAME)
         self.assertEqual(self.data.EMAIL, self.create_account_page.get_entered_email())
         self.create_account_page.enter_password(self.data.PASSWORD)
+        self.create_account_page.select_date_of_birth(self.data.DATE_OF_BIRTH)
         sleep(2)
