@@ -53,6 +53,10 @@ class CreateAccountPage(BasePage):
         """
         birth_day = Select(self.driver.find_element(*Locators.BIRTH_DAY_SELECT))
         birth_day.select_by_value(str(date_of_birth.day))
+        birth_month = Select(self.driver.find_element(*Locators.BIRTH_MONTH_SELECT))
+        birth_month.select_by_value(str(date_of_birth.month))
+        birth_year = Select(self.driver.find_element(*Locators.BIRTH_YEAR_SELECT))
+        birth_year.select_by_value(str(date_of_birth.year))
 
     def get_entered_email(self):
         """
